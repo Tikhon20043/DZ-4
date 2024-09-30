@@ -1,0 +1,28 @@
+//Допишите программу по развороту динамического массива.
+//Пример: если массив был [1, 2, 3, 4, 5], то должен стать [5, 4, 3, 2, 1]. Не забывайте про освобождение памяти!
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int size = 5;
+    int *a = new int[size];
+
+    for (int i = 0; i < size; ++i) {
+        cin >> a[i];
+    }
+
+    for (int i = 0; i < size / 2; ++i) {
+        int temp = a[i];
+        a[i] = a[size - 1 - i];
+        a[size - 1 - i] = temp;
+    }
+
+    for (int i = 0; i < size; ++i) {
+        cout << a[i] << " ";
+    }
+    
+    delete[] a;
+    return 0;
+}
