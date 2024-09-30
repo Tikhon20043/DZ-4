@@ -1,0 +1,19 @@
+//Подсчитайте количество вхождений буквы "A" в этой строке: char stroka[] = "Aaa1323#aa"; Не забывайте, что буква "A" должна быть английской, а не русской.
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char stroka[] = "Aaa1323#aa";
+    int count = 0;
+
+    for (int i = 0; stroka[i] != '\0'; i++) {
+        if (stroka[i] == 'A') {
+            count++;
+        }
+    }
+
+    cout << "Количество вхождений буквы 'A': " << count << endl;
+    return 0;
+}
