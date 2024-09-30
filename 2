@@ -1,0 +1,25 @@
+//Напишите код, который найдёт сумму всех элементов массива int arr[ ] = {500, 4, 24, 15, 100, 105} с помощью цикла for и с помощью цикла while.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {500, 4, 24, 15, 100, 105};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    int sumFor = 0;
+    for (int i = 0; i < size; i++) {
+        sumFor += arr[i];
+    }
+    cout << "Сумма с помощью цикла for: " << sumFor << endl;
+
+    int sumWhile = 0;
+    int j = 0;
+    while (j < size) {
+        sumWhile += arr[j];
+        j++;
+    }
+    cout << "Сумма с помощью цикла while: " << sumWhile << endl;
+
+    return 0;
+}
