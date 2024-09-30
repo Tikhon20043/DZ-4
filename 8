@@ -1,0 +1,19 @@
+//Подсчитайте количество прописных (заглавных) букв в строке: char stroka[] = "AaBbCcDdEeFfGgggggg"
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char stroka[] = "AaBbCcDdEeFfGgggggg";
+    int count = 0;
+
+    for (int i = 0; stroka[i] != '\0'; i++) {
+        if (stroka[i] >= 'A' && stroka[i] <= 'Z') {
+            count++;
+        }
+    }
+
+    cout << "Количество прописных букв: " << count << endl;
+    return 0;
+}
