@@ -1,0 +1,24 @@
+//Дан массив int arr[] = {5, 4, 3, 4, 9};
+//Найдите позицию максимального элемента массива.
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {5, 4, 3, 4, 9};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    int maxElement = arr[0];
+    int maxPosition = 0;
+
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > maxElement) {
+            maxElement = arr[i];
+            maxPosition = i;
+        }
+    }
+
+    cout << "Позиция максимального элемента: " << maxPosition << endl;
+    return 0;
+}
